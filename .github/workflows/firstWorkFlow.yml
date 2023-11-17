@@ -1,7 +1,7 @@
 name: first workflow
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
 
 jobs:
   firstjob:
@@ -11,7 +11,7 @@ jobs:
         shell: bash
         run: echo this is the first job!
       - name: checkout the repository
-        uses: action/checkout@v3
+        uses: actions/checkout@v3
       - name: greeting to a user with the hello world function
         id: greetings
         uses: actions/hello-world-javascript-action@main
